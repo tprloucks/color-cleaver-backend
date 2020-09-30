@@ -1,19 +1,8 @@
-const colorCombinator = require('./color-combinator.js');
 const colorDeconstructor = require('./color-deconstructor.js');
 const isValidPrimary = require('./is-valid-primary.js');
 const isValidSecondary = require('./is-valid-secondary.js');
+const colorCombinator = require('./color-combinator.js');
 
-
-describe('colorCombinator', () => {
-  it(`returns the combination of the two given colors`, () => {
-    expect(colorCombinator('red', 'yellow')).toBe('orange')
-    expect(colorCombinator('yellow', 'red')).toBe('orange')
-    expect(colorCombinator('red', 'blue')).toBe('purple')
-    expect(colorCombinator('blue', 'red')).toBe('purple')
-    expect(colorCombinator('yellow', 'blue')).toBe('green')
-    expect(colorCombinator('blue', 'yellow')).toBe('green')
-  })
-})
 
 describe('colorDeconstructor', () => {
   it(`returns the two colors a color comes from`, () => {
@@ -54,5 +43,16 @@ describe('isValidSecondary', () => {
     expect(isValidSecondary(invalidSecondary1)).toBe(false);
     expect(isValidSecondary(invalidSecondary2)).toBe(false);
     expect(isValidSecondary(invalidSecondary3)).toBe(false);
+  })
+})
+
+describe('colorCombinator', () => {
+  it(`returns the combination of the two given colors`, () => {
+    expect(colorCombinator('red', 'yellow')).toBe('orange')
+    expect(colorCombinator('yellow', 'red')).toBe('orange')
+    expect(colorCombinator('red', 'blue')).toBe('purple')
+    expect(colorCombinator('blue', 'red')).toBe('purple')
+    expect(colorCombinator('yellow', 'blue')).toBe('green')
+    expect(colorCombinator('blue', 'yellow')).toBe('green')
   })
 })
