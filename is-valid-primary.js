@@ -1,7 +1,10 @@
-/******************
- * YOUR CODE HERE *
- ******************/
 
+
+function isValidPrimary (str){
+  return (str === 'red' || str === 'blue' || str === 'yellow')
+  
+
+}
 
 
 
